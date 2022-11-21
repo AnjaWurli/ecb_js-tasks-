@@ -1,26 +1,21 @@
-# Exercises: Basic Operators with Numbers
+# Exercises: Basic Operators with Strings
 
-## 01) log a statement that returns 20
+## 01) Write a String that logs out your full name
 
-- [ ] result should be 20
-- [ ] use all of the 4 Arithmetic operators to get the result
+- [ ] Use the concatenation operator to concatenate each letter of your name into a string one by one
+
+## 02) W
 
 ## 02) Fix the following code snippets
 
-### Wrong result: Expected 555 not 855
+### Wrong result: Expected a Number 2 received 22
 
 ```js
-console.log(600 + 510 / 2);
+console.log("2" + 2);
 ```
 
-### Wrong result: Expected false not true
+### Wrong result: Output should be true. Make it work.
 
 ```js
-console.log("333" == 333);
-```
-
-### Wrong result: Expected true cause both values are greater than or equal
-
-```js
-console.log(50 + 2 > 52);
+console.log("test" == "TEST");
 ```
