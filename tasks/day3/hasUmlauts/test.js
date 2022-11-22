@@ -1,4 +1,4 @@
-describe("isUpperCase function tests", function () {
+describe("hasUmlauts function tests", function () {
   it("returns a true when the string contains umlauts", function () {
     chai.expect(hasUmlauts("Fürst")).to.be.true;
     chai.expect(hasUmlauts("Straßenbahn")).to.be.true;

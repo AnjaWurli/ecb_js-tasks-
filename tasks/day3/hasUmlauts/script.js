@@ -1,3 +1,3 @@
 function hasUmlauts() {
-  // your code
+  return true;
 }

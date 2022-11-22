@@ -1,3 +1,3 @@
-function stringLength(test) {
+function stringLength() {
   // your code
 }

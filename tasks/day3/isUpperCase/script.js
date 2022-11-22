@@ -1,3 +1,3 @@
-function hasUmlauts() {
+function isUpperCase() {
   // your code here
 }
