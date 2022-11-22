@@ -1,0 +1,3 @@
+function countSpaces() {
+  // your code
+}

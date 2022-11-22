@@ -1,0 +1,3 @@
+function hasUmlauts() {
+  // your code
+}
