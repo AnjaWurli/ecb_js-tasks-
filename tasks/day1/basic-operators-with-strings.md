@@ -4,8 +4,6 @@
 
 - [ ] Use the concatenation operator to concatenate each letter of your name into a string one by one
 
-## 02) W
-
 ## 02) Fix the following code snippets
 
 ### Wrong result: Expected a Number 2 received 22
