@@ -1,3 +1,0 @@
-function stringLength() {
-  // your code
-}

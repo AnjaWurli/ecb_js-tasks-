@@ -1,3 +1,0 @@
-function hasUmlauts() {
-  return true;
-}
