@@ -39,29 +39,8 @@ describe("johnsData Function Tests", function () {
     chai.expect(fullName()).to.equal("John Doe");
   });
 
-  it("updates the passed in property of the johnsData object when the changeJohnsData function was executed successful", function () {
-    changeJohnsData("firstName", "Max");
-    changeJohnsData("surName", "Müller");
-    changeJohnsData("age", 24);
-    changeJohnsData("city", "Berlin");
-    changeJohnsData("children", ["Lia"]);
-    changeJohnsData("hobbies", ["MMA"]);
-    chai.expect(johnsData).to.eql({
-      firstName: "Max",
-      surName: "Müller",
-      age: 24,
-      city: "Berlin",
-      children: ["Lia"],
-      hobbies: ["MMA"],
-    });
-  });
-
-  it("logs an info message when the changeJohnsData function was executed but no vaikd propName was passed in", function () {
-    changeJohnsData("foo", "bar");
-    chai.expect(
-      log.calledOnceWith(
-        "Sorry the passed in argument doesn't exists as a property in the johnsData object"
-      )
-    ).to.be.true;
+  it("the function johnHasBirthday increases John's age by one", function () {
+    johnHasBirthday();
+    chai.expect(johnsData.age).to.equal(johnsData.age + 1);
   });
 });
