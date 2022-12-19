@@ -19,8 +19,3 @@ isPalindrome("Hans")        => false
 isPalindrome("Lisa")        => false
 isPalindrome("Sven")        => false
 ```
-
-<details>
- <summary>Tip</summary>
- Tip goes here
-</details>
