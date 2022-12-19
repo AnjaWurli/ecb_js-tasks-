@@ -4,6 +4,6 @@ function fullName() {
   // your code here
 }
 
-function changeJohnsData(propName, propValue) {
+function johnHasBirthday() {
   // Your code here
 }
