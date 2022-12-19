@@ -71,6 +71,23 @@ const userObj = {
   age: 28,
   // This is a method
   welcomeUser: function () {
+    const fullName = userObj.firstName + " " + userObj.surName;
+    console.log("Welcome " + fullName);
+  },
+};
+```
+
+### This references the object itself
+
+To avoid renaming errors it's a better approach to use the this keyword instead of the variable name to reference to the current object.
+
+```js
+const userObj = {
+  firstName: "John",
+  surName: "Doe",
+  age: 28,
+  // This is a method
+  welcomeUser: function () {
     const fullName = this.firstName + " " + this.surName;
     console.log("Welcome " + fullName);
   },
@@ -155,4 +172,86 @@ const userObj = {
 };
 
 console.log(userObj.family.partner.firstName);
+```
+
+## Loop over Objects
+
+You can not access object entries like array's by index. There also does not exist a length property
+
+```js
+console.log(userObj[0]); // undefined
+console.log(userObj.length); // undefined
+```
+
+This means a normal for loop will not work but you can use a [for in loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) instead
+
+```js
+for (let entry in userObj) {
+  console.log(userObj[entry].firstName);
+}
+```
+
+## Combine arrays with Object literals to manage large data structures
+
+```js
+const users = [
+  {
+    firstName: "John",
+    surName: "Doe",
+    age: 28,
+  },
+  {
+    firstName: "Maria",
+    surName: "Paul",
+    age: 35,
+  },
+];
+```
+
+## Convert objects to arrays
+
+The build methods for Object literals in JavaScript are very limited. A common use case is to convert object literals into arrays.
+
+- [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+- [Object.values()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+- [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+
+## Truthy / Falsy values
+
+- [Read more about Truthy in JS](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+- [Read more about Falsy in JS](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+
+```js
+// "" === false
+const userName = "";
+
+// if (userName.length > 0)
+if (userName) {
+  console.log("Yep");
+} else {
+  console.log("Nope");
+}
+
+// 0 === false
+let sum = "0";
+
+if (sum > 0) {
+  console.log("Sum", "Yep");
+} else {
+  console.log("Sum", "Nope");
+}
+
+// 0 === false
+// "0" === true
+// 1 === true
+// -1 === true
+
+// "" === false
+// "a" === true
+
+// false === false
+// true === true
+
+// undefined === false
+// null === false
 ```
